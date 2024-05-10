@@ -30,7 +30,7 @@ const WelcomePage = () => {
         </WelcomeLogo>
 
         <WelcomeDescription>
-        Supercharge your productivity and take control of your tasks with Task
+          Supercharge your productivity and take control of your tasks with Task
           Pro - Don't wait, start achieving your goals now!
         </WelcomeDescription>
 

@@ -1,5 +1,6 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import instance from '../auth/authOperations';
+import instance from 'redux/auth/authOperations';
+
 // dashboards
 export const getAllDashboards = createAsyncThunk(
   'dashboards/fetchAllDashboards',
@@ -57,8 +58,8 @@ export const getDashboardById = createAsyncThunk(
   }
 );
 
-export const editDashboard = createAsyncThunk(
-  'dashboards/editDashboard',
+export const editDashbord = createAsyncThunk(
+  'dashboards/editDashbord',
   async ({ dashboardId, updatedData }, thunkAPI) => {
     try {
       const { data } = await instance.put(

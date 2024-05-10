@@ -4,7 +4,7 @@ import {
   selectIsLoading,
   selectUser,
   selectUserTheme,
-} from '../../../redux/auth/authSelectors';
+} from 'redux/auth/authSelectors';
 
 import userDark from '../../../images/user-dark.svg';
 import userLight from '../../..//images/user-light.svg';

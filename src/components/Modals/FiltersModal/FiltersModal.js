@@ -12,7 +12,7 @@ import {
   CustomRadioBtn,
   BgWrapper,
   ShowAllLabel,
-  LabelText,
+  LabetlText,
   Wrapper,
   ModalForm,
 } from './FiltersModal.styled';
@@ -20,10 +20,10 @@ import {
 import data from '../background.json';
 import { Formik } from 'formik';
 import { useDispatch } from 'react-redux';
-import { selectPriority } from '../../../redux/dashboards/dashboardsSlice';
-import { editDashboard } from '../../../redux/dashboards/dashboardsOperations';
+import { selectPriority } from 'redux/dashboards/dashboardsSlice';
+import { editDashbord } from 'redux/dashboards/dashboardsOperations';
 import { useSelector } from 'react-redux';
-import { selectCurrentDashboard } from '../../../redux/dashboards/dashboardsSelectors';
+import { selectCurrentDashboard } from 'redux/dashboards/dashboardsSelectors';
 
 const options = ['without', 'low', 'medium', 'high'];
 
@@ -47,7 +47,7 @@ const FiltersModal = () => {
   const changeBgUrl = el => {
     const updatedData = { backgroundURL: el };
     dispatch(
-      editDashboard({
+      editDashbord({
         dashboardId: currentDashboard._id,
         updatedData,
       })
@@ -65,7 +65,7 @@ const FiltersModal = () => {
       <Formik initialValues={initialValues}>
         <ModalForm>
           <FormWrapper>
-            <FormTitle>Backgrounds </FormTitle>
+            <FormTitle>Backgraunds </FormTitle>
 
             <BgWrapper>
               {data.map((el, idx) => (
@@ -117,11 +117,11 @@ const FiltersModal = () => {
                     <DefaultRadioBtn type="radio" value={el} name="label" />
                   </Label>
 
-                  <LabelText className={selectedLabel === el ? 'active' : ''}>
+                  <LabetlText className={selectedLabel === el ? 'active' : ''}>
                     {el === 'without'
                       ? `${el[0].toUpperCase() + el.slice(1)} priority`
                       : el[0].toUpperCase() + el.slice(1)}
-                  </LabelText>
+                  </LabetlText>
                 </Wrapper>
               ))}
             </RadioBtnWrapper>

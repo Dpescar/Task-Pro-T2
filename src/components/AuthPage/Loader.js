@@ -1,24 +1,25 @@
-import { ColorRing } from 'react-loader-spinner';
+import { RotatingSquare } from 'react-loader-spinner';
 import React from 'react';
 import styled from 'styled-components';
 
 const Spinner = styled.div`
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 `;
 
 const Loader = () => {
   return (
     <Spinner>
-      <ColorRing
+      <RotatingSquare
         visible={true}
-        height="32"
-        width="32"
+        type="TailSpin"
+        height="35"
+        width="35"
         ariaLabel="blocks-loading"
         wrapperStyle={{}}
         wrapperClass="blocks-wrapper"
-        colors={['#8FA1D0', '#E09CB5', '#f8b26a', '#abbd81', '#849b87']}
+        color="#8FA1D0"
       />
     </Spinner>
   );

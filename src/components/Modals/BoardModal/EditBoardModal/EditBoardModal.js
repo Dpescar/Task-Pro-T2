@@ -22,7 +22,7 @@ import sprite from '../../../../images/sprite.svg';
 
 import { Formik } from 'formik';
 import * as Yup from 'yup';
-import { editDashboard } from '../../../../redux/dashboards/dashboardsOperations';
+import { editDashbord } from 'redux/dashboards/dashboardsOperations';
 import { useDispatch } from 'react-redux';
 
 const validationSchema = Yup.object().shape({
@@ -55,7 +55,7 @@ const EditBoardModal = ({ closeModal, item }) => {
   const handleSubmit = values => {
     const { title, icon, backgroundURL } = values;
     const updatedData = { name: title, icon, backgroundURL };
-    dispatch(editDashboard({ dashboardId: _id, updatedData }));
+    dispatch(editDashbord({ dashboardId: _id, updatedData }));
     closeModal();
   };
 
@@ -107,7 +107,7 @@ const EditBoardModal = ({ closeModal, item }) => {
           </FormWrapper>
 
           <FormWrapper>
-            <FormTitle>Backgrounds </FormTitle>
+            <FormTitle>Backgraunds </FormTitle>
             <RadioBtnWrapper>
               {data.map((el, idx) => (
                 <label key={idx}>

@@ -12,7 +12,7 @@ import {
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 import { useDispatch } from 'react-redux';
-import { needHelp } from '../../../redux/auth/authOperations';
+import { needHelp } from 'redux/auth/authOperations';
 
 const validationSchema = Yup.object().shape({
   email: Yup.string().email('Invalid email').required('Email is required'),

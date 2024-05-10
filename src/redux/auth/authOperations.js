@@ -120,9 +120,9 @@ export const changeTheme = createAsyncThunk(
 
 export const updateUser = createAsyncThunk(
   'auth/prifile',
-  async (credentials, thunkAPI) => {
+  async (credintials, thunkAPI) => {
     try {
-      const { data } = await instance.put('api/users/profile', credentials);
+      const { data } = await instance.put('api/users/profile', credintials);
 
       return data;
     } catch (error) {
@@ -133,9 +133,9 @@ export const updateUser = createAsyncThunk(
 
 export const needHelp = createAsyncThunk(
   'auth/needHelp',
-  async (credentials, thunkAPI) => {
+  async (credintials, thunkAPI) => {
     try {
-      const { data } = await instance.post('api/users/help', credentials);
+      const { data } = await instance.post('api/users/help', credintials);
 
       return data;
     } catch (error) {

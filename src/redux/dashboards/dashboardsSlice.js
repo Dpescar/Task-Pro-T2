@@ -4,7 +4,7 @@ import {
   addDashboard,
   deleteDashboard,
   getDashboardById,
-  editDashboard,
+  editDashbord,
   addColumn,
   deleteColumn,
   editColumn,
@@ -13,7 +13,8 @@ import {
   editCard,
   changeColumn,
 } from './dashboardsOperations';
-import { logOut } from '../auth/authOperations';
+import { logOut } from 'redux/auth/authOperations';
+
 const handlePending = state => {
   state.isLoading = true;
 };
@@ -93,9 +94,9 @@ const dashboardsSlice = createSlice({
         state.selectedPriority = 'show all';
       })
 
-      .addCase(editDashboard.pending, handlePending)
-      .addCase(editDashboard.rejected, handleRejected)
-      .addCase(editDashboard.fulfilled, (state, action) => {
+      .addCase(editDashbord.pending, handlePending)
+      .addCase(editDashbord.rejected, handleRejected)
+      .addCase(editDashbord.fulfilled, (state, action) => {
         state.isLoading = false;
         state.error = null;
         const { _id, name, icon, backgroundURL } = action.payload;

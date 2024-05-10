@@ -177,7 +177,7 @@ export const LabelItem = styled.div`
   }
 `;
 
-export const LabelText = styled.p`
+export const LabetlText = styled.p`
   display: block;
   width: 100%;
   color: ${props => props.theme.modal.textSecondary};

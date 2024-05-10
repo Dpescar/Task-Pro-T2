@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectUserTheme } from 'redux/auth/authSelectors';
 import { theme } from 'constants/theme';
@@ -13,7 +13,7 @@ import {
 import sprite from '../../../images/sprite.svg';
 import { changeTheme } from 'redux/auth/authOperations';
 
-const ThemePicker = () => {
+const ThemePicker2 = () => {
   const dispatch = useDispatch();
 
   const activeUserTheme = useSelector(selectUserTheme);
@@ -68,4 +68,4 @@ const ThemePicker = () => {
   );
 };
 
-export default ThemePicker;
+export default ThemePicker2;

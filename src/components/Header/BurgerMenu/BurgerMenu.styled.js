@@ -3,9 +3,8 @@ import styled from 'styled-components';
 export const Button = styled.button`
   z-index: 999;
 
-  ${props => (props.isOpen ? 'opacity: 0' : 'opacity: 1')};
-
-  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  opacity: ${props => (props.isOpen ? '0' : '1')};
+  transition: opacity 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
   border: none;
   outline: none;
   background-color: transparent;
@@ -22,3 +21,6 @@ export const Icon = styled.svg`
   height: 32px;
   stroke: ${props => props.theme.header.menuIcon};
 `;
+
+// ${props => (props.isOpen ? 'opacity: 0' : 'opacity: 1')};
+// transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);

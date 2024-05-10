@@ -1,10 +1,15 @@
+// theme
 import { useSelector, useDispatch } from 'react-redux';
 import { ThemeProvider } from 'styled-components';
 import { theme } from 'constants/theme';
 import { Outlet, useNavigate } from 'react-router-dom';
 import { Suspense, useEffect } from 'react';
-import { selectUserTheme } from '../redux/auth/authSelectors';
-import { getAllDashboards, getDashboardById } from '../redux/dashboards/dashboardsOperations';
+import { selectUserTheme } from 'redux/auth/authSelectors';
+import {
+  getAllDashboards,
+  getDashboardById,
+} from 'redux/dashboards/dashboardsOperations';
+
 import Header from 'components/Header/Header';
 import { Container } from 'components/Container/Container.styled';
 import { Sidebar } from 'components/Sidebar/Sidebar';
@@ -34,13 +39,16 @@ const Home = () => {
       dispatch(getDashboardById(data.payload[0]._id));
       navigate(`/home/${data.payload[0].name}`);
     });
-  }, [dispatch, navigate]); // Include 'dispatch' and 'navigate' in the dependency array
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [dispatch]);
 
   return (
     <ThemeProvider theme={theme[selectThemeIndex()]}>
       <Container>
         <Header />
+
         <Sidebar />
+
         <Suspense fallback={<Loader />}>
           <Outlet />
         </Suspense>

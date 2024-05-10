@@ -13,9 +13,9 @@ import {
 
 import { Formik } from 'formik';
 import * as Yup from 'yup';
-import { logIn } from '../../redux/auth/authOperations';
+import { logIn } from 'redux/auth/authOperations';
 import Loader from 'components/AuthPage/Loader';
-import { selectIsLoading } from '../../redux/auth/authSelectors';
+import { selectIsLoading } from 'redux/auth/authSelectors';
 import { toast } from 'react-toastify';
 
 

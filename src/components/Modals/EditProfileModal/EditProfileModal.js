@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { selectUser, selectUserTheme } from '../../../redux/auth/authSelectors';
+import { selectUser, selectUserTheme } from 'redux/auth/authSelectors';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
-import { updateUser } from '../../../redux/auth/authOperations';
+import { updateUser } from 'redux/auth/authOperations';
 import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai';
 
 import {

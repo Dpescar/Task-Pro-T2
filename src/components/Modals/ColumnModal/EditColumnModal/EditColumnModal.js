@@ -1,7 +1,7 @@
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 import { useDispatch } from 'react-redux';
-import { editColumn } from '../../../../redux/dashboards/dashboardsOperations';
+import { editColumn } from 'redux/dashboards/dashboardsOperations';
 import sprite from '../../../../images/sprite.svg';
 
 import {

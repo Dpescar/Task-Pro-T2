@@ -8,12 +8,14 @@ import { Button, Icon } from './BurgerMenu.styled';
 
 const BurgerMenu = () => {
   const dispatch = useDispatch();
-  const isMenuOpen = useSelector(selectIsMenuOpen);
-  const handleClick = () => {
-    dispatch(openMenuMode());
-  };
+  const menuMode = useSelector(selectIsMenuOpen);
+
   return (
-    <Button type="button" onClick={handleClick} isOpen={isMenuOpen}>
+    <Button
+      type="button"
+      onClick={() => dispatch(openMenuMode())}
+      isOpen={menuMode}
+    >
       <Icon>
         <use href={sprite + '#icon-menu'} />
       </Icon>
